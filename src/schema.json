@@ -1,0 +1,128 @@
+{
+  "people": {
+    "data": {
+      "name": {
+        "propName": "name",
+        "displayName": "Character Name"
+      },
+      "enumerableProperties": [{
+        "propName": "demographics",
+        "displayName": "Character Demographics",
+        "properties": [{
+            "propName": "height",
+            "displayName": "Height"
+          },
+          {
+            "propName": "mass",
+            "displayName": "Mass"
+          },
+          {
+            "propName": "hair_color",
+            "displayName": "Hair Color"
+          },
+          {
+            "propName": "skin_color",
+            "displayName": "Skin Color"
+          },
+          {
+            "propName": "eye_color",
+            "displayName": "Eye Color"
+          },
+          {
+            "propName": "birth_year",
+            "displayName": "Birth Year"
+          },
+          {
+            "propName": "gender",
+            "displayName": "Gender"
+          }
+        ]
+      }],
+      "connections": [{
+          "name": "homeworld",
+          "displayName": "HomeWorld",
+          "iterable": "false"
+        },
+        {
+          "name": "species",
+          "displayName": "Species",
+          "iterable": "true"
+        },
+        {
+          "name": "starships",
+          "displayName": "Starships",
+          "iterable": "true"
+        },
+        {
+          "name": "vehicles",
+          "displayName": "Vehicles",
+          "iterable": "true"
+        }
+      ]
+    }
+  },
+  "species": {
+    "data": {
+      "name": {
+        "propName": "name",
+        "displayName": "Species Name"
+      },
+      "enumerableProperties": [{
+        "propName": "demographics",
+        "displayName": "Species Demographics",
+        "properties": [{
+            "propName": "classification",
+            "displayName": "Classification"
+          },
+          {
+            "propName": "designation",
+            "displayName": "Designation"
+          },
+          {
+            "propName": "average_height",
+            "displayName": "Average Height"
+          },
+          {
+            "propName": "skin_colors",
+            "displayName": "Skin Colors"
+          },
+          {
+            "propName": "hair_colors",
+            "displayName": "Hair Colors"
+          },
+          {
+            "propName": "eye_colors",
+            "displayName": "Eye Colors"
+          },
+          {
+            "propName": "average_lifespan",
+            "displayName": "Average Lifespan"
+          },
+          {
+            "propName": "language",
+            "displayName": "Language"
+          }
+        ]
+      }],
+      "connections": {
+        "name": "connections",
+        "properties": [{
+            "name": "homeworld",
+            "displayName": "HomeWorld",
+            "iterable": "false"
+          },
+          {
+            "name": "people",
+            "displayName": "People",
+            "iterable": "true"
+          },
+          {
+            "name": "films",
+            "displayName": "Films",
+            "iterable": "true"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+Working Details
+
+1. Retrieve mapping:
+  a. Capture prop name
+  b. Map prop name to 'type' of data (e.g. people/planets/starships etc.).
+  c. Retrieve data schema for that type.
+2. Get data
+3. 
+
+
+
+
+Requirements:
+1. Mapping of connection prop names to paths.
