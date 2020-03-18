@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
 
 import TopNode from "./TopNode";
 
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Route exact path="/:dimension/:id" component={TopNode} />
         {this.state.loading ? (
           <div>Loading..</div>
         ) : (
