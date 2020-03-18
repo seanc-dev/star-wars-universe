@@ -12,3 +12,4 @@ Working Details
 
 Requirements:
 1. Mapping of connection prop names to paths.
+2. Set state parameters

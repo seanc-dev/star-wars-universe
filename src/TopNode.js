@@ -1,5 +1,7 @@
 import React from "react";
 
+import SubNode from './SubNode';
+
 import "./TopNode.css";
 import schemaJSON from "./schema.json";
 
@@ -16,6 +18,15 @@ function TopNode(props) {
       );
     });
   };
+  const generateLinks = connections => {
+    console.log(connections);
+    const subNodes;
+    for (let key of connections) {
+      const urlData = connections[key]
+      subNodes += <SubNode key={key} dim={key} urlData={urlData} />
+    }
+    return 
+  };
   return (
     <div className="TopNode">
       <h1>{schema.name.displayName}</h1>
@@ -26,6 +37,9 @@ function TopNode(props) {
             <ul className="TopNode-list">
               {generateListItems(eProp, nodeData)}
             </ul>
+            <div className="TopNode-links">
+              {generateLinks(nodeData.connections)}
+            </div>
           </div>
         );
       })}
