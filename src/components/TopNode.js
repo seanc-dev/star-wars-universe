@@ -37,7 +37,6 @@ class TopNode extends Component {
   generateListItems = (schema, data) => {
     return schema.enumerablePropertiesArray.map(prop => {
       const { enumerablePropertyDisplayName, enumerablePropertyName } = prop;
-      debugger;
       return (
         <li key={enumerablePropertyName}>{`${enumerablePropertyDisplayName}: ${
           data[schema.enumerablePropertyDimensionName][enumerablePropertyName]
@@ -45,22 +44,15 @@ class TopNode extends Component {
       );
     });
   };
-  generateSubNodes = (
-    connectionNames,
-    connectionData,
-    connectionSchemaArray
-  ) => {
+  generateSubNodes = (connectionNames, connectionData) => {
     return connectionNames.map(connectionName => {
-      const { connectionDisplayName } = connectionData.find(
-        obj => obj.connectionName === connectionName
-      );
-      const connectionUrlArray = connectionData[connectionName];
+      const { displayName, urlArray } = connectionData[connectionName];
       return (
         <SubNode
           key={connectionName}
           dim={connectionName}
-          name={connectionDisplayName}
-          urlArray={connectionUrlArray}
+          displayName={displayName}
+          urlArray={urlArray}
         />
       );
     });
@@ -80,7 +72,6 @@ class TopNode extends Component {
           <div>
             <h1>{data.name}</h1>
             {schema.dimensionEnumerablePropertiesArray.map(eProp => {
-              debugger;
               return (
                 <div key={eProp.enumerablePropertyDisplayName}>
                   <h3>{eProp.enumerablePropertyDisplayName}</h3>
@@ -90,13 +81,7 @@ class TopNode extends Component {
                 </div>
               );
             })}
-            <div>
-              {this.generateSubNodes(
-                connectionKeys,
-                data.connections,
-                schema.dimensionConnectionsArray
-              )}
-            </div>
+            <div>{this.generateSubNodes(connectionKeys, data.connections)}</div>
           </div>
         )}
       </div>

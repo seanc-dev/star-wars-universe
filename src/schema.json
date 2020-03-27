@@ -40,7 +40,7 @@
       }],
       "dimensionConnectionsArray": [{
           "connectionName": "homeworld",
-          "connectionDisplayName": "HomeWorld",
+          "connectionDisplayName": "Homeworld",
           "isConnectionIterable": false
         },
         {

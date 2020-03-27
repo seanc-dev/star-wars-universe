@@ -12,13 +12,12 @@ const fn = {
     // apply properties
     const dataObj = { name: data.name, connections: {} };
     dimensionEnumerablePropertiesArray.map(ePropObj => {
-      dataObj[ePropObj.enumerablePropertyName] = {};
-      ePropObj.enumerablePropertiesArray.map(
-        prop =>
-          (dataObj[ePropObj.enumerablePropertyName][
-            prop.enumerablePropertyName
-          ] = data[prop.enumerablePropertyName])
-      );
+      dataObj[ePropObj.enumerablePropertyDimensionName] = {};
+      ePropObj.enumerablePropertiesArray.map(prop => {
+        dataObj[ePropObj.enumerablePropertyDimensionName][
+          prop.enumerablePropertyName
+        ] = data[prop.enumerablePropertyName];
+      });
     });
     // apply connections
     const connectionNamesArray = dimensionConnectionsArray.map(
@@ -38,7 +37,7 @@ const fn = {
       // omit if empty
       if (urlArray.length >= 1)
         dataObj.connections[connectionName] = {
-          name: connectionDisplayName,
+          displayName: connectionDisplayName,
           urlArray: urlArray
         };
     });
