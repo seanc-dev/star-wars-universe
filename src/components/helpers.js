@@ -4,23 +4,22 @@ import schema from "../schema.json";
 
 const fn = {
   formatData: function(data, dataDim) {
-    // get format
+    // get formats
     const {
       dimensionEnumerablePropertiesArray,
       dimensionConnectionsArray
     } = schema[dataDim].data;
     // apply properties
     const dataObj = { name: data.name, connections: {} };
-    for (let property in dimensionEnumerablePropertiesArray) {
-      const ePropObj = dimensionEnumerablePropertiesArray[property];
-      dataObj[ePropObj.enumberablePropertyName] = {};
+    dimensionEnumerablePropertiesArray.map(ePropObj => {
+      dataObj[ePropObj.enumerablePropertyName] = {};
       ePropObj.enumerablePropertiesArray.map(
         prop =>
-          (dataObj[ePropObj.enumberablePropertyName][
-            prop.enumberablePropertyName
-          ] = data[prop.enumberablePropertyName])
+          (dataObj[ePropObj.enumerablePropertyName][
+            prop.enumerablePropertyName
+          ] = data[prop.enumerablePropertyName])
       );
-    }
+    });
     // apply connections
     const connectionNamesArray = dimensionConnectionsArray.map(
       a => a.connectionName

@@ -23,7 +23,6 @@ class TopNode extends Component {
     const promises = Promise.all(
       connectionKeysArray.map(key => {
         const { urlArray } = formattedData.connections[key];
-        debugger;
         // coerce to array where only 1 URL given as string
         if (typeof urlArray === "string")
           return Promise.all([axios.get(urlArray)]);
@@ -37,13 +36,11 @@ class TopNode extends Component {
   }
   generateListItems = (schema, data) => {
     return schema.enumerablePropertiesArray.map(prop => {
-      const { enumberablePropertyDisplayName, enumberablePropertyName } = prop;
+      const { enumerablePropertyDisplayName, enumerablePropertyName } = prop;
       debugger;
       return (
-        <li
-          key={enumberablePropertyName}
-        >{`${enumberablePropertyDisplayName}: ${
-          data[schema.enumberablePropertyDimensionName][enumberablePropertyName]
+        <li key={enumerablePropertyName}>{`${enumerablePropertyDisplayName}: ${
+          data[schema.enumerablePropertyDimensionName][enumerablePropertyName]
         }`}</li>
       );
     });
@@ -82,10 +79,11 @@ class TopNode extends Component {
         ) : (
           <div>
             <h1>{data.name}</h1>
-            {schema.dimensionEnumerablePropertiesData.map(eProp => {
+            {schema.dimensionEnumerablePropertiesArray.map(eProp => {
+              debugger;
               return (
-                <div key={eProp.enumberablePropertyDisplayName}>
-                  <h3>{eProp.enumberablePropertyDisplayName}</h3>
+                <div key={eProp.enumerablePropertyDisplayName}>
+                  <h3>{eProp.enumerablePropertyDisplayName}</h3>
                   <ul className="TopNode-list">
                     {this.generateListItems(eProp, data)}
                   </ul>

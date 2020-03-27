@@ -6,35 +6,35 @@
         "dimensionDisplayName": "Character Name"
       },
       "dimensionEnumerablePropertiesArray": [{
-        "enumberablePropertyDimensionName": "demographics",
-        "enumberablePropertyDimensionDisplayName": "Character Demographics",
+        "enumerablePropertyDimensionName": "demographics",
+        "enumerablePropertyDimensionDisplayName": "Character Demographics",
         "enumerablePropertiesArray": [{
-            "enumberablePropertyName": "height",
-            "enumberablePropertyDisplayName": "Height"
+            "enumerablePropertyName": "height",
+            "enumerablePropertyDisplayName": "Height"
           },
           {
-            "enumberablePropertyName": "mass",
-            "enumberablePropertyDisplayName": "Mass"
+            "enumerablePropertyName": "mass",
+            "enumerablePropertyDisplayName": "Mass"
           },
           {
-            "enumberablePropertyName": "hair_color",
-            "enumberablePropertyDisplayName": "Hair Color"
+            "enumerablePropertyName": "hair_color",
+            "enumerablePropertyDisplayName": "Hair Color"
           },
           {
-            "enumberablePropertyName": "skin_color",
-            "enumberablePropertyDisplayName": "Skin Color"
+            "enumerablePropertyName": "skin_color",
+            "enumerablePropertyDisplayName": "Skin Color"
           },
           {
-            "enumberablePropertyName": "eye_color",
-            "enumberablePropertyDisplayName": "Eye Color"
+            "enumerablePropertyName": "eye_color",
+            "enumerablePropertyDisplayName": "Eye Color"
           },
           {
-            "enumberablePropertyName": "birth_year",
-            "enumberablePropertyDisplayName": "Birth Year"
+            "enumerablePropertyName": "birth_year",
+            "enumerablePropertyDisplayName": "Birth Year"
           },
           {
-            "enumberablePropertyName": "gender",
-            "enumberablePropertyDisplayName": "Gender"
+            "enumerablePropertyName": "gender",
+            "enumerablePropertyDisplayName": "Gender"
           }
         ]
       }],
@@ -73,39 +73,39 @@
         "dimensionDisplayName": "Species Name"
       },
       "enumerablePropertiesData": [{
-        "enumberablePropertyDimensionName": "demographics",
-        "enumberablePropertyDimensionDisplayName": "Species Demographics",
-        "enumberableProperties": [{
-            "enumberablePropertyName": "classification",
-            "enumberablePropertyDisplayName": "Classification"
+        "enumerablePropertyDimensionName": "demographics",
+        "enumerablePropertyDimensionDisplayName": "Species Demographics",
+        "enumerableProperties": [{
+            "enumerablePropertyName": "classification",
+            "enumerablePropertyDisplayName": "Classification"
           },
           {
-            "enumberablePropertyName": "designation",
-            "enumberablePropertyDisplayName": "Designation"
+            "enumerablePropertyName": "designation",
+            "enumerablePropertyDisplayName": "Designation"
           },
           {
-            "enumberablePropertyName": "average_height",
-            "enumberablePropertyDisplayName": "Average Height"
+            "enumerablePropertyName": "average_height",
+            "enumerablePropertyDisplayName": "Average Height"
           },
           {
-            "enumberablePropertyName": "skin_colors",
-            "enumberablePropertyDisplayName": "Skin Colors"
+            "enumerablePropertyName": "skin_colors",
+            "enumerablePropertyDisplayName": "Skin Colors"
           },
           {
-            "enumberablePropertyName": "hair_colors",
-            "enumberablePropertyDisplayName": "Hair Colors"
+            "enumerablePropertyName": "hair_colors",
+            "enumerablePropertyDisplayName": "Hair Colors"
           },
           {
-            "enumberablePropertyName": "eye_colors",
-            "enumberablePropertyDisplayName": "Eye Colors"
+            "enumerablePropertyName": "eye_colors",
+            "enumerablePropertyDisplayName": "Eye Colors"
           },
           {
-            "enumberablePropertyName": "average_lifespan",
-            "enumberablePropertyDisplayName": "Average Lifespan"
+            "enumerablePropertyName": "average_lifespan",
+            "enumerablePropertyDisplayName": "Average Lifespan"
           },
           {
-            "enumberablePropertyName": "language",
-            "enumberablePropertyDisplayName": "Language"
+            "enumerablePropertyName": "language",
+            "enumerablePropertyDisplayName": "Language"
           }
         ]
       }],
