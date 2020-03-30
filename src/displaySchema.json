@@ -1,0 +1,199 @@
+{
+  "people": {
+    "data": {
+      "dimensionName": {
+        "dimensionDisplayName": "People"
+      },
+      "enumerableProperties": {
+        "identity": {
+          "enumerablePropertyDimensionDisplayName": "Identity",
+          "enumerablePropertiesArray": [{
+              "enumerablePropertyName": "birthYear",
+              "enumerablePropertyDisplayName": "Birth Year"
+            },
+            {
+              "enumerablePropertyName": "gender",
+              "enumerablePropertyDisplayName": "Gender"
+            }
+          ]
+        },
+        "demographics": {
+          "enumerablePropertyDimensionDisplayName": "Demographic Info",
+          "enumerablePropertiesArray": [{
+              "enumerablePropertyName": "height",
+              "enumerablePropertyDisplayName": "Height"
+            },
+            {
+              "enumerablePropertyName": "mass",
+              "enumerablePropertyDisplayName": "Mass"
+            },
+            {
+              "enumerablePropertyName": "hair_color",
+              "enumerablePropertyDisplayName": "Hair Color"
+            },
+            {
+              "enumerablePropertyName": "skin_color",
+              "enumerablePropertyDisplayName": "Skin Color"
+            },
+            {
+              "enumerablePropertyName": "eye_color",
+              "enumerablePropertyDisplayName": "Eye Color"
+            }
+          ]
+        }
+      },
+      "connections": {
+        "homeworld": {
+          "connectionDisplayName": "Homeworld",
+          "isConnectionIterable": false
+        },
+        "films": {
+          "connectionDisplayName": "Films",
+          "isConnectionIterable": true
+        },
+        "species": {
+          "connectionDisplayName": "Species",
+          "isConnectionIterable": true
+        },
+        "starships": {
+          "connectionDisplayName": "Starships",
+          "isConnectionIterable": true
+        },
+        "vehicles": {
+          "connectionDisplayName": "Vehicles",
+          "isConnectionIterable": true
+        }
+      }
+    }
+  },
+  "species": {
+    "data": {
+      "dimensionName": {
+        "dimensionDisplayName": "Species"
+      },
+      "enumerableProperties": {
+        "other": {
+          "enumerablePropertyDimensionDisplayName": "Other Information",
+          "enumerableProperties": [{
+              "enumerablePropertyName": "classification",
+              "enumerablePropertyDisplayName": "Classification"
+            },
+            {
+              "enumerablePropertyName": "designation",
+              "enumerablePropertyDisplayName": "Designation"
+            },
+            {
+              "enumerablePropertyName": "language",
+              "enumerablePropertyDisplayName": "Language"
+            }
+          ]
+        },
+        "demographics": {
+          "enumerablePropertyDimensionDisplayName": "Species Demographics",
+          "enumerableProperties": [{
+              "enumerablePropertyName": "average_height",
+              "enumerablePropertyDisplayName": "Average Height"
+            },
+            {
+              "enumerablePropertyName": "skin_colors",
+              "enumerablePropertyDisplayName": "Skin Colors"
+            },
+            {
+              "enumerablePropertyName": "hair_colors",
+              "enumerablePropertyDisplayName": "Hair Colors"
+            },
+            {
+              "enumerablePropertyName": "eye_colors",
+              "enumerablePropertyDisplayName": "Eye Colors"
+            },
+            {
+              "enumerablePropertyName": "average_lifespan",
+              "enumerablePropertyDisplayName": "Average Lifespan"
+            }
+          ]
+        }
+      },
+      "connections": {
+        "homeworld": {
+          "connectionDisplayName": "HomeWorld",
+          "isConnectionIterable": false
+        },
+        "people": {
+          "connectionDisplayName": "People",
+          "isConnectionIterable": true
+        },
+        "films": {
+          "connectionDisplayName": "Films",
+          "isConnectionIterable": true
+        }
+      }
+    }
+  },
+  "films": {
+    "data": {
+      "enumerableProperties": {
+        "demographics": {
+          "enumerablePropertyDimensionDisplayName": "Species Demographics",
+          "enumerableProperties": [{
+              "enumerablePropertyName": "classification",
+              "enumerablePropertyDisplayName": "Classification"
+            },
+            {
+              "enumerablePropertyName": "designation",
+              "enumerablePropertyDisplayName": "Designation"
+            },
+            {
+              "enumerablePropertyName": "average_height",
+              "enumerablePropertyDisplayName": "Average Height"
+            },
+            {
+              "enumerablePropertyName": "skin_colors",
+              "enumerablePropertyDisplayName": "Skin Colors"
+            },
+            {
+              "enumerablePropertyName": "hair_colors",
+              "enumerablePropertyDisplayName": "Hair Colors"
+            },
+            {
+              "enumerablePropertyName": "eye_colors",
+              "enumerablePropertyDisplayName": "Eye Colors"
+            },
+            {
+              "enumerablePropertyName": "average_lifespan",
+              "enumerablePropertyDisplayName": "Average Lifespan"
+            },
+            {
+              "enumerablePropertyName": "language",
+              "enumerablePropertyDisplayName": "Language"
+            }
+          ]
+        }
+      },
+      "connections": {
+        "homeworld": {
+          "connectionDisplayName": "HomeWorld",
+          "isConnectionIterable": false
+        },
+        "people": {
+          "connectionDisplayName": "People",
+          "isConnectionIterable": true
+        },
+        "films": {
+          "connectionDisplayName": "Films",
+          "isConnectionIterable": true
+        }
+      }
+    }
+  }
+
+  id: ID!
+    title: String!
+    director: String
+  openingCrawl: String
+  releaseDate: DateTime
+  characters(...): [Person!]
+  planets(...): [Planet!]
+  producers: [String!]
+  species(...): [Species!]
+  starships(...): [Starship!]
+  vehicles(...): [Vehicle!]
