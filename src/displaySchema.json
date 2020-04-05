@@ -42,28 +42,7 @@
           ]
         }
       },
-      "connections": {
-        "homeworld": {
-          "connectionDisplayName": "Homeworld",
-          "isConnectionIterable": false
-        },
-        "films": {
-          "connectionDisplayName": "Films",
-          "isConnectionIterable": true
-        },
-        "species": {
-          "connectionDisplayName": "Species",
-          "isConnectionIterable": true
-        },
-        "starships": {
-          "connectionDisplayName": "Starships",
-          "isConnectionIterable": true
-        },
-        "vehicles": {
-          "connectionDisplayName": "Vehicles",
-          "isConnectionIterable": true
-        }
-      }
+      "connections": [6, 2, 3, 4, 5]
     }
   },
   "species": {
@@ -113,87 +92,34 @@
           ]
         }
       },
-      "connections": {
-        "homeworld": {
-          "connectionDisplayName": "HomeWorld",
-          "isConnectionIterable": false
-        },
-        "people": {
-          "connectionDisplayName": "People",
-          "isConnectionIterable": true
-        },
-        "films": {
-          "connectionDisplayName": "Films",
-          "isConnectionIterable": true
-        }
-      }
+      "connections": [2, 6, 7]
     }
   },
   "films": {
     "data": {
       "enumerableProperties": {
-        "demographics": {
-          "enumerablePropertyDimensionDisplayName": "Species Demographics",
+        "details": {
+          "enumerablePropertyDimensionDisplayName": "Film Details",
           "enumerableProperties": [{
-              "enumerablePropertyName": "classification",
-              "enumerablePropertyDisplayName": "Classification"
+              "enumerablePropertyName": "title",
+              "enumerablePropertyDisplayName": "Title"
             },
             {
-              "enumerablePropertyName": "designation",
-              "enumerablePropertyDisplayName": "Designation"
+              "enumerablePropertyName": "director",
+              "enumerablePropertyDisplayName": "Director"
             },
             {
-              "enumerablePropertyName": "average_height",
-              "enumerablePropertyDisplayName": "Average Height"
+              "enumerablePropertyName": "openingCrawl",
+              "enumerablePropertyDisplayName": "Opening Crawl"
             },
             {
-              "enumerablePropertyName": "skin_colors",
-              "enumerablePropertyDisplayName": "Skin Colors"
-            },
-            {
-              "enumerablePropertyName": "hair_colors",
-              "enumerablePropertyDisplayName": "Hair Colors"
-            },
-            {
-              "enumerablePropertyName": "eye_colors",
-              "enumerablePropertyDisplayName": "Eye Colors"
-            },
-            {
-              "enumerablePropertyName": "average_lifespan",
-              "enumerablePropertyDisplayName": "Average Lifespan"
-            },
-            {
-              "enumerablePropertyName": "language",
-              "enumerablePropertyDisplayName": "Language"
+              "enumerablePropertyName": "releaseDate",
+              "enumerablePropertyDisplayName": "Release Date"
             }
           ]
         }
       },
-      "connections": {
-        "homeworld": {
-          "connectionDisplayName": "HomeWorld",
-          "isConnectionIterable": false
-        },
-        "people": {
-          "connectionDisplayName": "People",
-          "isConnectionIterable": true
-        },
-        "films": {
-          "connectionDisplayName": "Films",
-          "isConnectionIterable": true
-        }
-      }
+      "connections": [0, 1, 3, 4, 5]
     }
   }
-
-  id: ID!
-    title: String!
-    director: String
-  openingCrawl: String
-  releaseDate: DateTime
-  characters(...): [Person!]
-  planets(...): [Planet!]
-  producers: [String!]
-  species(...): [Species!]
-  starships(...): [Starship!]
-  vehicles(...): [Vehicle!]
+}
