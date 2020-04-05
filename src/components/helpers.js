@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import schema from "../schema.json";
+import schema from "../displaySchema.json";
 
 const fn = {
   formatData: function(data, dataDim) {
