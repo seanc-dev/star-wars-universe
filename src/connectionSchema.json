@@ -1,0 +1,41 @@
+[{
+    "connectionName": "characters",
+    "connectionDisplayName": "Characters",
+    "dataType": "array"
+  },
+  {
+    "connectionName": "planets",
+    "connectionDisplayName": "Planets",
+    "dataType": "array"
+  },
+  {
+    "connectionName": "films",
+    "connectionDisplayName": "Films",
+    "dataType": "array"
+  },
+  {
+    "connectionName": "species",
+    "connectionDisplayName": "Species",
+    "dataType": "array"
+  },
+  {
+    "connectionName": "vehicles",
+    "connectionDisplayName": "Vehicles",
+    "dataType": "array"
+  },
+  {
+    "connectionName": "starships",
+    "connectionDisplayName": "Starships",
+    "dataType": "array"
+  },
+  {
+    "connectionName": "homeworld",
+    "connectionDisplayName": "Homeworld",
+    "dataType": "string"
+  },
+  {
+    "connectionName": "people",
+    "connectionDisplayName": "People",
+    "dataType": "array"
+  }
+]
