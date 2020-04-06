@@ -96,7 +96,7 @@ const queries = {
       }
     }
   `,
-  planet: gql`
+  Planet: gql`
     query Planet($id: ID!) {
       Planet(id: $id) {
         id
@@ -120,7 +120,7 @@ const queries = {
       }
     }
   `,
-  species: gql`
+  Species: gql`
     query Species($id: ID!) {
       Species(id: $id) {
         averageHeight
@@ -144,7 +144,7 @@ const queries = {
       }
     }
   `,
-  startship: gql`
+  Startship: gql`
     query Starship($id: ID!) {
       Startship(id: $id) {
         cargoCapacity
@@ -162,6 +162,35 @@ const queries = {
         manufacturer
         maxAtmospheringSpeed
         mglt
+        name
+        passengers {
+          id
+          name
+        }
+        pilots {
+          id
+          name
+        }
+      }
+    }
+  `,
+  Vehicle: gql`
+    query Vehicle($id: ID!) {
+      Vehicle(id: $id) {
+        cargoCapacity
+        class
+        consumables
+        costInCredits
+        crew
+        films {
+          id
+          title
+        }
+        id
+        length
+        manufacturer
+        maxAtmospheringSpeed
+        model
         name
         passengers {
           id
