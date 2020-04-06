@@ -1,34 +1,6 @@
 import { gql } from "apollo-boost";
 
 const queries = {
-  nodeList: gql`
-    query {
-      allPersons {
-        id
-        name
-      }
-      allFilms {
-        id
-        title
-      }
-      allPlanets {
-        id
-        name
-      }
-      allSpecies {
-        id
-        name
-      }
-      allStarships {
-        id
-        name
-      }
-      allVehicles {
-        id
-        name
-      }
-    }
-  `,
   person: gql`
     query Person($id: ID!) {
       Person(id: $id) {

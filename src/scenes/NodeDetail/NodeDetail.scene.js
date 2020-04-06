@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/react-hooks";
 
-import queries from "../queries";
-import helpers from "./helpers";
+import queries from "./NodeDetail.queries.js";
+import fn from "../../services/helpers";
 
 function TopNode({ match }) {
   const { dimension, id } = match.params;
@@ -12,7 +12,7 @@ function TopNode({ match }) {
   });
 
   useEffect(() => {
-    if (!loading) setQueryData(data[helpers.capitaliseEachWord(dimension)]);
+    if (!loading) setQueryData(data[fn.capitaliseEachWord(dimension)]);
   }, [loading, data, dimension]);
 
   if (loading) return <p>Loading...</p>;
