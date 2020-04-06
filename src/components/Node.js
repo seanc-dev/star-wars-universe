@@ -13,7 +13,7 @@ function TopNode({ match }) {
 
   useEffect(() => {
     if (!loading) setQueryData(data[helpers.capitaliseEachWord(dimension)]);
-  });
+  }, [loading, data, dimension]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
