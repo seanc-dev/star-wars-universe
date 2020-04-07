@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "../Home/Home.scene.js";
 import DimensionsMenu from "../Dimensions/Dimensions.scene";
-import NodeList from "../Dimensions/components/NodeList.component";
+import NodeList from "../NodeList/NodeList.scene";
 import NodeDetail from "../NodeDetail/NodeDetail.scene";
 import NotFound from "../../NotFound.component";
 
