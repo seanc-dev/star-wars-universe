@@ -7,14 +7,17 @@ const queries = {
         id
         name
         species {
+          id
           name
         }
         gender
         birthYear
         homeworld {
+          id
           name
         }
         films {
+          id
           title
         }
       }
@@ -37,6 +40,9 @@ const queries = {
         name
         population
         terrain
+        surfaceWater
+        rotationPeriod
+        orbitalPeriod
       }
     }
   `,
@@ -47,6 +53,7 @@ const queries = {
         name
         classification
         designation
+        averageLifespan
         language
       }
     }
@@ -78,7 +85,7 @@ const queries = {
         cargoCapacity
       }
     }
-  `
+  `,
 };
 
 export default queries;

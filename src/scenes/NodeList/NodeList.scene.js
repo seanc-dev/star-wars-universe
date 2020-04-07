@@ -11,7 +11,7 @@ import NotFound from "../../NotFound.component";
 import queries from "./NodeList.queries.js";
 import schema from "./schema/NodeList.schema.js";
 
-const NodeList = props => {
+const NodeList = (props) => {
   const { dimension } = props.match.params;
   const { loading, error, data } = useQuery(queries[dimension]);
   let dimKey, nodeArray;
@@ -42,9 +42,9 @@ const NodeList = props => {
               </Grid>
             </Grid>
             <Grid container spacing={2}>
-              {nodeArray.map(node => (
-                <Grid item xs={12} sm={4} md={2}>
-                  <Node key={node.name} dimKey={dimKey} data={node} />
+              {nodeArray.map((node) => (
+                <Grid key={node.name} item xs={12} sm={4} md={2}>
+                  <Node dimKey={dimKey} data={node} />
                 </Grid>
               ))}
             </Grid>
