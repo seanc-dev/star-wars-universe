@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useQuery } from "@apollo/react-hooks";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -7,36 +9,44 @@ import Typography from "@material-ui/core/Typography";
 import { v4 as uuidv4 } from "uuid";
 
 import schema from "../schema/NodeList.schema";
+import queries from "./Node.queries";
 import "../styles/NodeList.css";
 
 const Node = (props) => {
-  const { data, dimKey } = props;
+  const { dimension, id } = props;
+  console.log(`${dimension}, ${id}`);
+  const { loading, error, data } = useQuery(queries[dimension], {
+    variables: id,
+  });
+  console.log(data);
   return (
     <div>
-      <Card>
-        <CardActionArea>
-          <CardContent>
-            <Typography gutterBottom variant="h6" component="h3">
-              {data[schema.displayFieldName[dimKey]]}
-            </Typography>
-            <ul>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {schema.additionalDetail[dimKey].map((detail) => {
-                  return (
-                    <li key={uuidv4()}>
-                      {`${detail.displayName} ${
-                        detail.accessFn
-                          ? detail.accessFn(data[detail.fieldName])
-                          : data[detail.fieldName]
-                      }`}
-                    </li>
-                  );
-                })}
+      <Link to={`/app/${dimension}/${id}`}>
+        <Card>
+          <CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h6" component="h3">
+                {data[schema.displayFieldName[dimension]]}
               </Typography>
-            </ul>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+              <ul>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {schema.additionalDetail[dimension].map((detail) => {
+                    return (
+                      <li key={uuidv4()}>
+                        {`${detail.displayName} ${
+                          detail.accessFn
+                            ? detail.accessFn(data[detail.fieldName])
+                            : data[detail.fieldName]
+                        }`}
+                      </li>
+                    );
+                  })}
+                </Typography>
+              </ul>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </Link>
     </div>
   );
 };
