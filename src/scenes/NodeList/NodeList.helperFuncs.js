@@ -42,8 +42,12 @@ const fn = {
     });
   },
   speedInKPH: function (num) {
+    const numberWithCommas = function (x) {
+      if (!x) return nullDataStr;
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
     if (!num) return nullDataStr;
-    return `${this.numberWithCommas} kph`;
+    return `${numberWithCommas(num)} kph`;
   },
 };
 

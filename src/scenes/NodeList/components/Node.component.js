@@ -22,7 +22,6 @@ const Node = (props) => {
             <ul>
               <Typography variant="body2" color="textSecondary" component="p">
                 {schema.additionalDetail[dimKey].map((detail) => {
-                  console.log(data);
                   return (
                     <li key={uuidv4()}>
                       {`${detail.displayName} ${

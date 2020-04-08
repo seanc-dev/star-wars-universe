@@ -78,8 +78,8 @@ const schema = {
     ],
     allVehicles: [
       {
-        displayName: "Class",
-        fieldName: "class",
+        displayName: "Model",
+        fieldName: "model",
         accessFn: fn.capitaliseEachWord,
       },
       {
@@ -95,8 +95,8 @@ const schema = {
     ],
     allStarships: [
       {
-        displayName: "Model",
-        fieldName: "model",
+        displayName: "Class",
+        fieldName: "class",
         accessFn: fn.capitaliseEachWord,
       },
       {
