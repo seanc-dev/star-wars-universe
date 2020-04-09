@@ -9,16 +9,10 @@ import Typography from "@material-ui/core/Typography";
 import { v4 as uuidv4 } from "uuid";
 
 import schema from "../schema/NodeList.schema";
-import queries from "./Node.queries";
 import "../styles/NodeList.css";
 
 const Node = (props) => {
-  const { dimension, id } = props;
-  console.log(`${dimension}, ${id}`);
-  const { loading, error, data } = useQuery(queries[dimension], {
-    variables: id,
-  });
-  console.log(data);
+  const { dimension, data, id } = props;
   return (
     <div>
       <Link to={`/app/${dimension}/${id}`}>
