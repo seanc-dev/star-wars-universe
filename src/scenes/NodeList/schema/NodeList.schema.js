@@ -1,16 +1,16 @@
-import fn from "../NodeList.helperFuncs";
+import fn from "../../../services/helpers";
 
 const schema = {
   displayFieldName: {
-    allFilms: "title",
-    allPersons: "name",
-    allSpecies: "name",
-    allPlanets: "name",
-    allVehicles: "name",
-    allStarships: "name",
+    Film: "title",
+    Person: "name",
+    Species: "name",
+    Planet: "name",
+    Vehicle: "name",
+    Starship: "name",
   },
   additionalDetail: {
-    allFilms: [
+    Film: [
       {
         displayName: "Director:",
         fieldName: "director",
@@ -25,7 +25,7 @@ const schema = {
         fieldName: "episodeId",
       },
     ],
-    allPersons: [
+    Person: [
       {
         displayName: "Species:",
         fieldName: "species",
@@ -42,7 +42,7 @@ const schema = {
         accessFn: fn.countArrayElements,
       },
     ],
-    allPlanets: [
+    Planet: [
       {
         displayName: "Population:",
         fieldName: "population",
@@ -59,7 +59,7 @@ const schema = {
         accessFn: fn.appendPercentage,
       },
     ],
-    allSpecies: [
+    Species: [
       {
         displayName: "Average Lifespan",
         fieldName: "averageLifespan",
@@ -76,7 +76,7 @@ const schema = {
         accessFn: fn.capitaliseEachWord,
       },
     ],
-    allVehicles: [
+    Vehicle: [
       {
         displayName: "Model",
         fieldName: "model",
@@ -93,7 +93,7 @@ const schema = {
         accessFn: fn.speedInKPH,
       },
     ],
-    allStarships: [
+    Starship: [
       {
         displayName: "Class",
         fieldName: "class",
