@@ -12,6 +12,7 @@ const fn = {
     return arr[0].name;
   },
   countArrayElements: (arr) => {
+    if (!arr) return nullDataStr;
     return arr.length;
   },
   toDateStr: (dt) => {
