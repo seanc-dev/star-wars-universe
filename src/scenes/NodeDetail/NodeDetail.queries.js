@@ -1,7 +1,7 @@
 import { gql } from "apollo-boost";
 
 const queries = {
-  person: gql`
+  Person: gql`
     query Person($id: ID!) {
       Person(id: $id) {
         id
@@ -37,7 +37,7 @@ const queries = {
       }
     }
   `,
-  film: gql`
+  Film: gql`
     query Film($id: ID!) {
       Film(id: $id) {
         id
@@ -116,9 +116,9 @@ const queries = {
       }
     }
   `,
-  Startship: gql`
+  Starship: gql`
     query Starship($id: ID!) {
-      Startship(id: $id) {
+      Starship(id: $id) {
         cargoCapacity
         class
         consumables
@@ -135,10 +135,7 @@ const queries = {
         maxAtmospheringSpeed
         mglt
         name
-        passengers {
-          id
-          name
-        }
+        passengers
         pilots {
           id
           name
@@ -174,7 +171,7 @@ const queries = {
         }
       }
     }
-  `
+  `,
 };
 
 export default queries;
