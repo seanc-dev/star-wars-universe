@@ -4,11 +4,12 @@ import { useQuery } from "@apollo/react-hooks";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
+import { gql } from "apollo-boost";
 
 import Node from "./components/Node.component";
 import NotFound from "../../NotFound.component";
 
-import queries from "./NodeList.queries.js";
+import queries from "./NodeList.queries";
 import schema from "./schema/NodeList.schema.js";
 
 const NodeList = (props) => {
@@ -23,7 +24,7 @@ const NodeList = (props) => {
     [dimKey] = Object.keys(data);
     nodeArray = data[dimKey];
     nodeArray.sort(schema.sortingFunctions[dimKey][0].fn);
-    console.log(nodeArray);
+    console.log(JSON.parse(JSON.stringify(nodeArray)));
   }
   return (
     <div className="NodeList">
@@ -42,11 +43,14 @@ const NodeList = (props) => {
               </Grid>
             </Grid>
             <Grid container spacing={2}>
-              {nodeArray.map((node) => (
-                <Grid key={node.name} item xs={12} sm={4} md={2}>
-                  <Node dimKey={dimKey} data={node} />
-                </Grid>
-              ))}
+              {nodeArray.map((node) => {
+                const id = node.id;
+                return (
+                  <Grid key={id} item xs={12} sm={4} md={2}>
+                    <Node key={id} id={id} dimension={dimension} data={node} />
+                  </Grid>
+                );
+              })}
             </Grid>
           </div>
         )}
